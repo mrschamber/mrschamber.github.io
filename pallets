@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pallets</title>
+  </head>
+  <body>
+    <script>
+    function calc() {
+      const height = document.getElementById('height').value;
+      const calculated = (height - 1.35)*3.19;
+      document.getElementById('pallets_there').innerHTML = 8.2-calculated;
+      document.getElementById('pallets_to_go').innerHTML = calculated;
+    }
+    </script>
+    <div>
+      Höhe in m: <input type="text" id="height" name="height" />
+      <button onClick="calc();" />
+    </div>
+    <div>
+      Pallets im Tank: <span id="pallets_there">0</span> Tonnen
+    </div>
+    <div>
+      Pallets zu bestellen: <span id="pallets_to_go">0</span> Tonnen
+    </div>
+  </body>
+</html>
