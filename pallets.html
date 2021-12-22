@@ -70,12 +70,13 @@
     position: relative;
     font-size: var(--fieldFontSize, 1rem);
   }
-  .field__input{
+.field__input{
   box-sizing: border-box;
   width: var(--fieldWidth, 100%);
   height: var(--fieldHeight, 3rem);
   padding: var(--fieldPaddingTop, 1.25rem) var(--uiFieldPaddingRight) var(--fieldPaddingBottom, .5rem) var(--uiFieldPaddingLeft);
   border-bottom: var(--uiFieldBorderWidth) solid var(--fieldBorderColor, rgba(0, 0, 0, .25));  
+  margin-right: var(--fieldWidth, 2rem);
 }
 
 .field__input:focus{
@@ -170,8 +171,8 @@
     function calc() {
       const height = document.getElementById('height').value;
       const calculated = (height - 1.35)*3.19;
-      document.getElementById('pallets_there').innerHTML = 8.2-calculated;
-      document.getElementById('pallets_to_go').innerHTML = calculated;
+      document.getElementById('pallets_there').innerHTML = Math.round((8.2 - calculated)*100)/100;
+      document.getElementById('pallets_to_go').innerHTML = Math.round(calculated*100)/100;
     }
     </script>
     <div class="height_block">
