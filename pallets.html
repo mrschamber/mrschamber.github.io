@@ -170,7 +170,7 @@
     <script>
     function calc() {
       const height = document.getElementById('height').value;
-      const calculated = (height - 1.35)*3.19;
+      const calculated = (height - 1.035)*3.19068;
       document.getElementById('pallets_there').innerHTML = Math.round((8.2 - calculated)*100)/100;
       document.getElementById('pallets_to_go').innerHTML = Math.round(calculated*100)/100;
     }
