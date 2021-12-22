@@ -171,13 +171,13 @@
     function calc() {
       const height = document.getElementById('height').value;
       const calculated = (height - 1.035)*3.19068;
-      document.getElementById('pallets_there').innerHTML = Math.round((8.2 - calculated)*100)/100;
+      document.getElementById('pallets_there').innerHTML = Math.round((7.91 - calculated)*100)/100;
       document.getElementById('pallets_to_go').innerHTML = Math.round(calculated*100)/100;
     }
     </script>
     <div class="height_block">
       <label class="field field_v2">
-        <input class="field__input" id="height" placeholder="Bspl. 2.12">
+        <input class="field__input" type="number" id="height" placeholder="Bspl. 2.12">
         <span class="field__label-wrap">
         <span class="field__label">Höhe in m</span>
         </span>
